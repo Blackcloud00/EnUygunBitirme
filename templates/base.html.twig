@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}BWclothes merhaba diyor!{% endblock %}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}" />
+        {% endblock %}
+    </head>
+    <body>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+    <img src="{{ asset('images/logo.png') }}" alt="BW Clothes Logo" width="200" height="78">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product">Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="iletisim">İletişim</a>
+        </li>
+        <li class="nav-item">
+         <div class="dropdown">
+          <a class="dropbtn nav-link">Üyelik İşlemleri</a>
+            <div class="dropdown-content pos-ab">
+            <a class="nav-link" href="login">Giriş Yap</a>
+            <a class="nav-link" href="register">Kayıt Ol</a>
+         </div>
+         </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+     {% block body %}{% endblock %}
+<footer class="bg-dark text-center text-white">
+   <a class="navbar-brand" href="/">
+    <img src="{{ asset('images/logo.png') }}" alt="BW Clothes Logo" width="200" height="78">
+    </a>
+  <div class="container p-4">
+    <section class="">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Linkler</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="/" class="text-white">Ana Sayfa</a>
+            </li>
+            <li>
+              <a href="product" class="text-white">Ürünler</a>
+            </li>
+            <li>
+              <a href="iletisim" class="text-white">İletişim</a>
+            </li>
+          </ul>
+        </div>
+         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Linkler</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="login" class="text-white">Giriş Yap</a>
+            </li>
+            <li>
+              <a href="register" class="text-white">Üye Ol</a>
+            </li>
+          </ul>
+        </div>
+          <div class="col-lg-6 mb-4 mb-md-0">
+          <p>2022'de araç kiralama fiyatları ne kadar?
+2022’de araç kiralama fiyatları ne kadar gibi sorular, şu sıralar kiralık araç seçeneklerini inceleyenler tarafından en çok merak edilen sorular arasında yer alıyor. Ben de bu sorulardan yola çıkarak fiyatlar hakkında bilgi edinebileceğin, hangi araçların ne kadara kiralandığı, otomatik araba kiralama fiyatları ve düz vites araba kiralama fiyatları hakkında bilgiler bulabileceğin bu içeriği hazırladım.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://olgunkarabulut.com/" target="_blank">olgunkarabulut.com</a>
+  </div>
+</footer>
+    </div>
+    
+    </body>
+ {% block javascripts %}
+    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap/popper.min.js') }}"></script>
+    <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+ {% endblock %}
+</html>

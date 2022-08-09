@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ürünler{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    {% for prod in urunler %}
+        <div class="card" style="width: 18rem;">
+            <img src="/images/products/{{ prod.productImg }}" class="card-img-top" alt="{{ prod.productName }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ prod.productName }}</h5>
+                <p class="card-text">{{ prod.productPrice }} ₺</p>
+                <a href="pay?productId={{ prod.id }}" class="btn btn-primary">Satın Al</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

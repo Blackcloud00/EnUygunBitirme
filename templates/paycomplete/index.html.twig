@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ürünler{% endblock %}
+
+{% block body %}
+    <div class="row">
+        {% if db_urun == true  %}
+            <div class="card" style="width: 18rem;">
+                <img src="/images/products/{{ urun.productImg }}" class="card-img-top" alt="{{ urun.productName }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ urun.productName }}</h5>
+                    <p class="card-text">{{ urun.productPrice }} ₺</p>
+                    <a href="pay?{{ urun.id }}" class="btn btn-primary">Satın Al</a>
+                </div>
+            </div>
+        {% endif %}
+        {% if db_urun == false  %}
+            <h2>Satın alınmak istenen ürün bulunmamakta</h2>
+        {% endif %}
+    </div>
+{% endblock %}
